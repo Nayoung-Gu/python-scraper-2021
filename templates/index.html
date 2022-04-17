@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Remote Job</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+    <link rel="shortcut icon" href="static/icon5.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="black-bg">
+        <div class="main">
+          <img src="/static/main.jpg" />
+          <h1 class="title">&lt; Remote Job /&gt;</h1>
+          <h2>a tool for searching remote programming jobs around the world</h2>
+        </div>
+
+        <form class="search-input" action="/result" method="get">
+          <input
+            type="text"
+            placeholder="Search all jobs..."
+            required
+            name="word"
+          />
+          <button><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </header>
+
+    <div class="site-link">
+      <span
+        ><a href="https://stackoverflow.com/jobs" target="_blank"
+          ><img src="/static/so.png" /></a
+      ></span>
+      <span
+        ><a href="https://weworkremotely.com/" target="_blank"
+          ><img src="/static/wwr.jpg" /></a
+      ></span>
+      <span
+        ><a href="https://remoteok.com/" target="_blank"
+          ><img src="/static/remoteok.png" /></a
+      ></span>
+    </div>
+  </body>
+</html>

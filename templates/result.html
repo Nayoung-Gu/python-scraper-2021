@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Remote Job</title>
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="icon5.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="result__header">
+        <div class="nav-bar">
+            <a href="/"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="black-bg result__black-bg">
+            <h2>Found {{resultsNumber}} results for {{searchInput}}<i class="fas fa-search"></i></h2>
+            <a href="/export?word={{searchInput}}"><i class="far fa-file-excel"></i>Export to CSV</a>
+            
+        </div>       
+    </header>
+    <section>
+      <h4>Title</h4>
+      <h4>Company</h4>
+      <h4>Link</h4>
+      {% for job in jobs %}
+        <span>{{job.company}}</span>
+        <span>{{job.title}}</span>
+        <a href="{{job.link}}" target="_blank">Apply</a>
+      {% endfor %}
+    </section>
+
+</body>
+</html>
